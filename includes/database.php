@@ -1,6 +1,6 @@
 <?php
 
-$db = mysqli_connect('localhost', 'root', 'root', 'appsalon_mvc');
+$db = mysqli_connect('localhost', 'cloudy-gap-vat', 'V7A9vf5+Uw2M5nUn)-', 'cloudy-gap-vat');
 
 
 if (!$db) {
