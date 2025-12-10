@@ -1,6 +1,16 @@
 <?php
 
-$db = mysqli_connect('localhost', '', '', '');
+$db = mysqli_connect(
+    $_ENV['DB_HOST'],
+
+    $_ENV['DB_USER'],
+
+    $_ENV['DB_PASSWORD'],
+
+    $_ENV['DB_DBNAME'],
+
+    $_ENV['DB_PORT']
+);
 
 
 if (!$db) {
@@ -9,3 +19,5 @@ if (!$db) {
     echo "error de depuración: " . mysqli_connect_error();
     exit;
 }
+
+$db->set_charset("utf8");
